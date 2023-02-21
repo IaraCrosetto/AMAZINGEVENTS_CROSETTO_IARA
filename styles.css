@@ -1,0 +1,65 @@
+.navbar{
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.046) ;
+}
+.navbar img{
+    height: 3rem;
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+header .container{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(217,3,104);
+}
+header a{
+    color: rgb(217,3,104);
+}
+main .checkbox-container label{
+    margin-left: 1rem;
+}
+main button{
+    background-color: transparent;
+    border: 0;
+}
+main button:hover{
+    background-color: rgba(202, 202, 202, 0.167);
+    border: 0;
+    border-radius: 4px;
+}
+main button a{
+    color: rgb(217,3,104);
+    text-decoration: none;
+}
+main form{
+    width: 20rem;
+}
+table{
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.091);
+    width: 100%;
+}
+th, td {
+    border-collapse: collapse;
+    border: 1.5px solid rgba(68, 68, 68, 0.078);
+}
+header svg,
+footer svg{
+    font-size: 1.5rem !important;
+}
+@media (max-width:992px){
+    .checkbox-container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+    }
+    main .container-top{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .search-container{
+        margin-left: 1.5rem;
+    }
+}
