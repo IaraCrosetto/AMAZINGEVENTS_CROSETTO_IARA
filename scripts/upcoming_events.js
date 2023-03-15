@@ -39,7 +39,7 @@ function generateCheckboxes(events) {
 //Card generator
 function generateUpcomingEventsCardsHTML(events, currentDate) {
     if (events.length == 0) {
-        pastEventsCardsContainer.innerHTML = `<p class="text-center">The event was not found.</p>`
+        upcomingEventsCardsContainer.innerHTML = `<p class="text-center">The event was not found.</p>`
         return
     }
     let cards = '';
