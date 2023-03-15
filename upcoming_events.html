@@ -51,101 +51,15 @@
     <main>
         <div class="container my-5">
             <div class="container-top d-flex justify-content-between align-items-center">
-                <div class="checkbox-container">
-                    <label>
-                      <input type="checkbox" name="category1">
-                      Category
-                    </label>
-                    <label>
-                      <input type="checkbox" name="category2">
-                      Category
-                    </label>
-                    <label>
-                      <input type="checkbox" name="category3">
-                      Category
-                    </label>
-                    <label>
-                      <input type="checkbox" name="category4">
-                      Category
-                    </label>
-                    <label>
-                      <input type="checkbox" name="category5">
-                      Category
-                    </label>
-                </div>
+                <div class="checkbox-container" id="checkboxes_container"></div>
                 <div class="search-container">
-                    <label>
-                        <input type="text" name="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </label>
+                    <!-- Added the id="search_input" for show data-->
+                    <input class="search-input" id="search_input" type="text" name="search" placeholder="Search event">
                 </div> 
             </div>
             <div class="container-center m-5">
                 <!-- Added the id="upcoming_events_cards" for show data-->
-                <div class="row row-cols-md-3 g-5" id="upcoming_events_cards">
-                    <!-- DYNAMICS CARDS
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="./assets/Costume_Party.jpg" class="card-img-top" alt="Museum Tour">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="card-text">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-description">Descriptive text.</p>  
-                            </div>
-                            <div class="card-interaction d-flex justify-content-between align-items-center">
-                              <span>Price $0000</span>
-                              <a href="./details.html">View more</a>
-                           </div>  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="./assets/Music_Concert.jpg" class="card-img-top" alt="Food Fair">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="card-text">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-description">Descriptive text.</p>  
-                            </div>
-                            <div class="card-interaction d-flex justify-content-between align-items-center">
-                              <span>Price $0000</span>
-                              <a href="./details.html">View more</a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="./assets/Marathon.jpg" class="card-img-top" alt="Cinema">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="card-text">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-description">Descriptive text.</p>  
-                            </div>
-                            <div class="card-interaction d-flex justify-content-between align-items-center">
-                              <span>Price $0000</span>
-                              <a href="./details.html">View more</a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="./assets/Cinema.jpg" class="card-img-top" alt="Marathon">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div class="card-text">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-description">Descriptive text.</p>  
-                            </div>
-                            <div class="card-interaction d-flex justify-content-between align-items-center">
-                              <span>Price $0000</span>
-                              <a href="./details.html">View more</a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    -->
-                </div>
+                <div class="row row-cols-md-3 g-5" id="upcoming_events_cards"></div>
             </div>        
         </div>
     </main>
