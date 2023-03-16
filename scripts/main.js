@@ -11,19 +11,22 @@ generateCheckboxes(data.events);
 input.addEventListener('input', finalFilter);
 checkboxesContainer.addEventListener('change', finalFilter);
 
-//SupeFilter
+//SuperFilter
 function finalFilter() {  
-    let filteringText = textFilter(data.events, input.value);
+    /*let filteringText = textFilter(data.events, input.value);
     let filteringCheckboxes = checkboxFilter(filteringText);
-    generateCardsHTML(filteringCheckboxes);
+    generateCardsHTML(filteringCheckboxes);*/
+    generateCardsHTML(checkboxFilter(textFilter(data.events, input.value)));
 } 
 //Checkbox generator
 function generateCheckboxes(events) {
     let arrayCategories = events.map(event => event.category);
     // Set es un método que presenta una colección que no permite elementos repetidos
     // Luego a Set lo convierto en Array
-    let setCategories = new Set(arrayCategories);
-    let arrayCheckboxes = Array.from(setCategories);
+    //let setCategories = new Set(arrayCategories);
+    //let arrayCheckboxes = Array.from(setCategories);
+    let arrayCheckboxes = Array.from(new Set(arrayCategories));
+
     let checkboxes = '';
     arrayCheckboxes.forEach(category => {
         checkboxes +=`<label>
@@ -51,7 +54,7 @@ function generateCardsHTML(events) {
                             </div>
                             <div class="card-interaction d-flex justify-content-between align-items-center">
                                 <span>Price $${event.price}</span>
-                                <a href="./details.html" class="text-center">View more</a>
+                                <a href="./details.html?_id=${event._id}" class="card-link">View more</a>
                             </div>
                         </div>
                      </div>
@@ -59,6 +62,7 @@ function generateCardsHTML(events) {
     });
     homeCardsContainer.innerHTML = cards;
 }
+
 //Fiters
 function textFilter(events, text) {
     let arrayFilteredText = events.filter(event => event.name.toLowerCase().includes(text.toLowerCase()));
