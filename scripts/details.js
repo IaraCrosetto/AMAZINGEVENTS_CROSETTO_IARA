@@ -1,7 +1,6 @@
-const queryString = location.search;
-const params = new URLSearchParams(queryString);
-const _id = params.get("_id");
-const eventDetailed = data.events.find(event => event._id == _id);
+const queryParams = new URLSearchParams(window.location.search);
+const eventString = queryParams.get("event");
+const eventDetailed = JSON.parse(decodeURIComponent(eventString));
 
 const div = document.querySelector("#details_cards")
 div.innerHTML = `<div class="card mb-3" style="max-width: 790px;">
@@ -21,5 +20,5 @@ div.innerHTML = `<div class="card mb-3" style="max-width: 790px;">
                     </div>
                 </div>
                 </br>
-                <small class="text-muted"><a href="./index.html" class="card-link">Return to the homepage</a></small>
+                <small class="text-muted"><a href="./index.html" class="card-link-return">Return to the homepage</a></small>
                 `       

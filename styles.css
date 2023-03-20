@@ -27,8 +27,8 @@ header a{
     color: rgb(217,3,104);
 }
 header a :hover{
-    color: rgb(87, 111, 199);
     transition: 0.3s;
+    transform: scale(1.1);
 }
 
 
@@ -45,24 +45,12 @@ main{
 }
 
 /* CARDS */
-main .card-interaction a{
-    padding: 0.3rem;
-    background-color: transparent;
-    border: 0;
-    color: rgb(217,3,104);
-    text-decoration: none;
-}
-main .card-interaction a:hover{
-    background-color: rgba(202, 202, 202, 0.167);
-    border: 0;
-    border-radius: 4px;
-    transition: 0.3s;
-}
 img {
     object-fit: cover;
     width: 100%;
     height: 12rem;
 }
+
 /* FORM */
 main form{
     width: 25rem;
@@ -80,14 +68,23 @@ main form button:hover{
 } 
 
 /* DETAILS */
-.card-link {
+.card-link,
+.card-link-return {
     color: inherit;
+    text-decoration: none;
   }
-  
-.card-link:hover {
-    color: rgb(217,3,104);
+.card-link-return:hover {
     text-decoration: underline;
-  }
+}
+.card-hover {
+    transition: all 0.2s ease-in-out;
+}
+  
+.card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.196);
+}
+  
 .details_card_img img{
     object-fit: cover;
     width: 100%;
