@@ -92,13 +92,23 @@ main form button:hover{
 }
 
 /* TABLE */
-table{
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.091);
+table {
     width: 100%;
+    margin-bottom: 2rem;
 }
-th, td {
+td,
+thead th{
     border-collapse: collapse;
     border: 1.5px solid rgba(68, 68, 68, 0.078);
+}
+th {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-collapse: none;
+}
+.table-data-titles{
+    color: white;
+    background-image: linear-gradient(to left, rgb(250, 195, 212), rgba(254, 52, 146, 0.779));
 }
 
 /* GENERAL ICONS */
