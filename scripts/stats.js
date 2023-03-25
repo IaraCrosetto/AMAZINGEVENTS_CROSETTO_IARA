@@ -83,12 +83,4 @@ function calculateAverageAssistancePercentage(events) {
     return ((sumOfAssistance / sumOfCapacity) * 100).toFixed(2);
 }
 
-function calculateRevenues(events) {
-    let revenue = 0;
-
-    events.forEach(event => {
-        revenue += event.price;
-    });
-
-    return (revenue);
-}
+ 

@@ -32,7 +32,7 @@ function generateCardsHTML(events) {
     let cards = '';
     events.forEach(event => {
         cards += `<div class="col">
-                        <a href="./details.html?event=${encodeURIComponent(JSON.stringify(event))}" class="card-link text-center">
+                        <a href="./details.html?id=${event._id}" class="card-link text-center">
                             <div class="card h-100 card-hover">
                                 <img src='${event.image}' class="card-img-top" alt="Museum Tour">
                                 <div class="card-body d-flex flex-column justify-content-between">
