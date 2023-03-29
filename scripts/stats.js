@@ -22,7 +22,7 @@ async function getEvents(){
         })
 }
 
-// Events for percentage of attendance
+// Events for percentage by attendance
 function organizeForAssistance(events) {
     const pastEventsInOrder = events.filter(event => 'assistance' in event).sort((a, b) => (a.assistance/a.capacity)*100 - (b.assistance/b.capacity)*100);
     const upcomingEventsInOrder = events.filter(event => !('assistance' in event)).sort((a, b) => (a.estimate/a.capacity)*100 - (b.estimate/b.capacity)*100);
@@ -45,7 +45,7 @@ function getCategorizedEvents(events){
 // Print events for events stastistics table
 function printEventsStatistics(events) {
     const eventWithLargerCapacity = events.reduce((max, event) => max.capacity > event.capacity ? max : event, events[0]);
-    
+
     let tableRow = ' ';
     tableRow += (`<tr>
                       <td>${events[events.length-1].name}</td>
@@ -87,7 +87,7 @@ function calculateRevenues(events) {
     let revenue = 0;
 
     events.forEach(event => {
-        revenue += event.price;
+        revenue += event.price* (event.assistance || event.estimate);
     });
 
     return (revenue);
